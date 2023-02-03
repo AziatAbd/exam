@@ -9,8 +9,8 @@ const Header = () => {
 
   return (
     <>
-      <Button onClick={themes.toggleTheme}>light</Button>
-      <Button onClick={themes.toggleTheme}>dark</Button>
+      <Button onClick={themes.lightTheme}>light</Button>
+      <Button onClick={themes.darkTheme}>dark</Button>
     </>
   );
 };

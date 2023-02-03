@@ -88,10 +88,18 @@ const MainContent = () => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <Button onClick={plusHandler}>+</Button>
-      <Button onClick={minusHandler}>-</Button>
-      <Button onClick={multiplyHandler}>*</Button>
-      <Button onClick={divideHandler}>/</Button>
+      <Button disabled={!state.input} onClick={plusHandler}>
+        +
+      </Button>
+      <Button disabled={!state.input} onClick={minusHandler}>
+        -
+      </Button>
+      <Button disabled={!state.input} onClick={multiplyHandler}>
+        *
+      </Button>
+      <Button disabled={!state.input} onClick={divideHandler}>
+        /
+      </Button>
     </div>
   );
 };

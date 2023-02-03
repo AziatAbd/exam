@@ -16,13 +16,17 @@ export const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
-  const toggleTheme = useCallback(() => {
-    setTheme(theme === "light" ? "dark" : "light");
-  }, [theme]);
+  const darkTheme = useCallback(() => {
+    setTheme("dark");
+  }, []);
+  const lightTheme = useCallback(() => {
+    setTheme("light");
+  }, []);
 
   const themes = {
     theme,
-    toggleTheme,
+    darkTheme,
+    lightTheme,
   };
 
   return (
