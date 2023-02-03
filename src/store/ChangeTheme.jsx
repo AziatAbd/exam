@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { createContext, useState } from "react";
 
 // const themes = {
@@ -15,9 +16,9 @@ export const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme(theme === "light" ? "dark" : "light");
-  };
+  }, [theme]);
 
   const themes = {
     theme,

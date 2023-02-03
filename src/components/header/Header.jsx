@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { ThemeContext } from "../../store/ChangeTheme";
 import Button from "../UI/button/Button";
 
@@ -15,4 +15,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
