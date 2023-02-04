@@ -5,12 +5,10 @@ import Button from "../UI/button/Button";
 const Header = () => {
   const themes = useContext(ThemeContext);
 
-  console.log(themes.toggleTheme);
-
   return (
     <>
-      <Button onClick={themes.lightTheme}>light</Button>
-      <Button onClick={themes.darkTheme}>dark</Button>
+      <Button onClick={themes.changeToLightTheme}>light</Button>
+      <Button onClick={themes.changeToDarkTheme}>dark</Button>
     </>
   );
 };
