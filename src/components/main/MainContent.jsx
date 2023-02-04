@@ -89,6 +89,7 @@ const MainContent = () => {
 
   const plusHandler = () => {
     dispatch({ type: actionsType.PLUS });
+    setPrevHistory(false);
   };
   const minusHandler = () => {
     dispatch({ type: actionsType.MINUS });
@@ -135,7 +136,6 @@ const MainContent = () => {
           /
         </Button>
       </div>
-      <h1>Prev History</h1>
     </div>
   );
 };
